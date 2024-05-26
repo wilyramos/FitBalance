@@ -22,26 +22,25 @@ function App() {
     return (
       <>
         <header className="bg-lime-600 py-3">
-          <div className="container mx-auto flex justify-between uppercase items-center">
-            <h1 className="text-center text-2xl text-white font-bold">
-              FitBalance
-            </h1>
-
+        <div className="container mx-auto py-4">
+          <div className="flex justify-between items-center px-5">
+            <h1 className="text-center text-2xl text-white font-bold">FitBalance</h1>
             <button
-              className=" bg-gray-600 text-white font-bold py-2 px-4 rounded disabled:opacity-80"
+              className="bg-gray-600 text-white py-2 px-2 rounded disabled:opacity-80"
               disabled={!canRestartApp()}
               onClick={() => dispatch({type: 'restart-app'})}
             >
-              Reiniciar Contador
+              Reiniciar App
             </button>
           </div>
+        </div>
         </header>
 
         <section className="container mx-auto mt-10">
-          <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-2">
+          <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-2 px-5">
 
             <div>
-              <h2 className="text-2xl font-bold text-cente text-gray-700">Agregar Actividad</h2>
+              <h2 className="text-2xl font-bold text-cente text-gray-700 px-5">Agregar Actividad</h2>
               <Form
               dispatch={dispatch}
               state={state}
